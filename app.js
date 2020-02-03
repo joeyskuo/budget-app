@@ -37,4 +37,5 @@ var appController = (function(budget, ui) {
     
     document.querySelector('.add__btn').addEventListener('click', addBudgetItem);
 
-})(budget, ui);
+    document.addEventListener('keypress', function(event) {
+})(budgetController, uiController);
