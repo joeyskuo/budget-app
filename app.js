@@ -24,3 +24,11 @@ var uiController = (function() {
     //
 
 })();
+
+// main module
+
+var appController = (function(budget, ui) {
+
+
+
+})(budget, ui);
