@@ -1,5 +1,4 @@
 // budget module
-        // contains all methods with private scope
 
 var budgetController = (function() {
 
