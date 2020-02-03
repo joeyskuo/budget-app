@@ -38,4 +38,11 @@ var appController = (function(budget, ui) {
     document.querySelector('.add__btn').addEventListener('click', addBudgetItem);
 
     document.addEventListener('keypress', function(event) {
+
+        if(event.keyCode === 13) {
+            addBudgetItem();
+        }
+
+    })
+
 })(budgetController, uiController);
