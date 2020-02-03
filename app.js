@@ -16,3 +16,11 @@ var budgetController = (function() {
     }
 
 })();
+
+// ui module
+
+var uiController = (function() {
+    
+    //
+
+})();
