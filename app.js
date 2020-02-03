@@ -29,5 +29,12 @@ var uiController = (function() {
 var appController = (function(budget, ui) {
 
 
+    var addBudgetItem = function() {
+
+    }
+
+    // event listeners
+    
+    document.querySelector('.add__btn').addEventListener('click', addBudgetItem);
 
 })(budget, ui);
