@@ -2,4 +2,7 @@
     background-image: url(img/back.png);
     background-size: cover;
     background-position: center;
+
+    display: flex;
+    justify-content: center;
 }
