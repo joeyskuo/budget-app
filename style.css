@@ -32,7 +32,8 @@ body {
 /* ************ */
 
 #budget-total {
-    background-image: url(img/back.png);
+    height: 40vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(img/back.png);
     background-size: cover;
     background-position: center;
 
@@ -42,7 +43,8 @@ body {
 }
 
 #budget {
-    color: white;
+    width: 350px;
+    color: #fff;
 }
 
 .budget__title {
