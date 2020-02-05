@@ -54,6 +54,29 @@ body {
     background-color: #FF5049;
 }
 
+.budget__income--text,
+.budget__expenses--text {
+    float: left;
+    font-size: 13px;
+    color: #444;
+    margin-top: 2px;
+}
+
+.budget__income--value,
+.budget__expenses--value {
+    float: left;
+    letter-spacing: 1px;
+}
+
+.budget__income--percentage,
+.budget__expenses--percentage {
+    float: left;
+    width: 34px;
+    font-size: 11px;
+    padding: 3px 0;
+    margin-left: 10px;
+}
+
 .budget__value {
     font-weight: 300;
     font-size: 46px;
