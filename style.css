@@ -42,3 +42,11 @@ body {
 .budget__expenses {
     background-color: #FF5049;
 }
+
+.budget__value {
+    font-weight: 300;
+    font-size: 46px;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
