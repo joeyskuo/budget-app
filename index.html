@@ -30,17 +30,20 @@
         </section>
 
         <section id="budget-form">
-            <div class="container">
-                <select name="type" id="type-select">
-                    <option value="plus">+</option>
-                    <option value="minus">-</option>
-                </select>
-                <input type="text" placeholder="Add description">
-                <input type="text" placeholder="Value">
-                <button class="add__btn"></button>
+            <div id="form">
+                <div class="form__container">
+                    <select class="form__type" name="type" id="type-select">
+                        <option value="income">+</option>
+                        <option value="expense">-</option>
+                    </select>
+                    <input type="text" class="form__description" placeholder="Add description">
+                    <input type="text" class="form__value" placeholder="Value">
+                    <button class="form__submit"></button>
             </div>
+        </div>
         </section>
-        <section id="budget-expenses">
+
+        <section id="budget-items">
 
         </section>
 
