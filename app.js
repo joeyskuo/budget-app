@@ -20,7 +20,16 @@ var budgetController = (function() {
 
 var uiController = (function() {
     
-    //
+    return {
+        getInput: function() {
+
+            return {
+                type: document.querySelector('.form__type').value,
+                description: document.querySelector('.form__description').value,
+                value: document.querySelector('.form__value').value
+            }
+        }
+    }
 
 })();
 
