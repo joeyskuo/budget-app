@@ -2,16 +2,22 @@
 
 var budgetController = (function() {
 
-    var x = 23;
+    var Expense = function(id, description, value) {
 
-    var add = function(a) {
-        return x + a;
+        this.id = id;
+        this.description = description;
+        this.value = value;
+
     }
 
-    return {
-        publicTest: function(b) {
-            console.log(add(b));
-        }
+    var Income = function(id, description, value) {
+
+        this.id = id;
+        this.description = description;
+        this.value = value;
+
+    }
+
     }
 
 })();
