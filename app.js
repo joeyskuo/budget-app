@@ -48,7 +48,19 @@ var uiController = (function() {
 
 var appController = (function(budget, ui) {
 
-    var DOM = uiController.getDOMstrings();
+    var setupEventListeners = function() {
+        var DOM = uiController.getDOMstrings();
+    
+        document.querySelector(DOM.inputSubmit).addEventListener('click', addBudgetItem);
+
+        document.addEventListener('keypress', function(event) {
+            if(event.keyCode === 13) {
+                addBudgetItem();
+            }
+        })
+    }
+
+
 
     var addBudgetItem = function() {
         
@@ -57,16 +69,13 @@ var appController = (function(budget, ui) {
         console.log(input);
     }
 
-    // event listeners
-    
-    document.querySelector(DOM.inputSubmit).addEventListener('click', addBudgetItem);
-
-    document.addEventListener('keypress', function(event) {
-
-        if(event.keyCode === 13) {
-            addBudgetItem();
+    return {
+        init: function() {
+            console.log('Application Started');
+            setupEventListeners();
         }
-
-    })
+    }
 
 })(budgetController, uiController);
+
+appController.init();
