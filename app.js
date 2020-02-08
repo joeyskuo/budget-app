@@ -101,9 +101,11 @@ var appController = (function(budget, ui) {
 
     var addBudgetItem = function() {
         
-        var input = uiController.getInput();
+        var input, newItem;
 
-        console.log(input);
+        input = uiController.getInput();
+        newItem = budgetController.addItem(input.type, input.description, input.value);
+
     }
 
     return {
