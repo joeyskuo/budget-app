@@ -39,7 +39,10 @@ var appController = (function(budget, ui) {
 
 
     var addBudgetItem = function() {
+        
+        var input = uiController.getInput();
 
+        console.log(input);
     }
 
     // event listeners
