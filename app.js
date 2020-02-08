@@ -19,10 +19,14 @@ var budgetController = (function() {
     }
 
     var data = {
-        expenses: [],
-        incomes: [],
-        expenseTotal: 0,
-        incomeTotal: 0
+        items: {
+            expense: [],
+            income: []
+        },
+        total: {
+            expense: 0,
+            income: 0
+        }
     }
 
 })();
