@@ -18,6 +18,11 @@ var budgetController = (function() {
 
     }
 
+    var data = {
+        expenses: [],
+        incomes: [],
+        expenseTotal: 0,
+        incomeTotal: 0
     }
 
 })();
