@@ -20,13 +20,19 @@ var budgetController = (function() {
 
 var uiController = (function() {
     
+    var DOMstrings = {
+        inputType: '.form__type',
+        inputDescription: '.form__description',
+        inputValue: '.form__value'
+    }
+
     return {
         getInput: function() {
 
             return {
-                type: document.querySelector('.form__type').value,
-                description: document.querySelector('.form__description').value,
-                value: document.querySelector('.form__value').value
+                type: document.querySelector(DOMstrings.inputType).value,
+                description: document.querySelector(DOMstrings.inputDescription).value,
+                value: document.querySelector(DOMstrings.inputValue).value
             }
         }
     }
