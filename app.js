@@ -23,7 +23,8 @@ var uiController = (function() {
     var DOMstrings = {
         inputType: '.form__type',
         inputDescription: '.form__description',
-        inputValue: '.form__value'
+        inputValue: '.form__value',
+        inputSubmit: '.form__submit'
     }
 
     return {
@@ -47,6 +48,7 @@ var uiController = (function() {
 
 var appController = (function(budget, ui) {
 
+    var DOM = uiController.getDOMstrings();
 
     var addBudgetItem = function() {
         
@@ -57,7 +59,7 @@ var appController = (function(budget, ui) {
 
     // event listeners
     
-    document.querySelector('.form__submit').addEventListener('click', addBudgetItem);
+    document.querySelector(DOM.inputSubmit).addEventListener('click', addBudgetItem);
 
     document.addEventListener('keypress', function(event) {
 
