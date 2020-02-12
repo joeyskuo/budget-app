@@ -61,7 +61,9 @@ var uiController = (function() {
         inputType: '.form__type',
         inputDescription: '.form__description',
         inputValue: '.form__value',
-        inputSubmit: '.form__submit'
+        inputSubmit: '.form__submit',
+        incomeList: '.income__list',
+        expenseList: '.expense__list'
     }
 
     return {
