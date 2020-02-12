@@ -74,6 +74,23 @@ var uiController = (function() {
             }
         },
 
+        addListItem: function(obj, type) {
+
+            var item, newItem;
+
+            if(type == 'income') {
+                item = '<div class="item clearfix" id="income-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
+            } else if (type == 'expense') {
+                item = '<div class="item clearfix" id="expense-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__percentage">%percentage%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
+            }
+
+            // Fill placeholder values
+            newItem = item.replace('%id%'. obj.id);
+            newItem = item.replace('%description%'. obj.description);
+            newItem = item.replace('%value%'. obj.value);
+            
+        },
+
         getDOMstrings: function() {
             return DOMstrings;
         }
