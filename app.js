@@ -129,6 +129,7 @@ var appController = (function(budget, ui) {
 
         input = uiController.getInput();
         newItem = budgetController.addItem(input.type, input.description, input.value);
+        uiController.addListItem(newItem, input.type);
 
     }
 
