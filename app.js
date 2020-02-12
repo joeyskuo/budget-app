@@ -87,9 +87,9 @@ var uiController = (function() {
             }
 
             // Fill placeholder values
-            newItem = item.replace('%id%'. obj.id);
-            newItem = item.replace('%description%'. obj.description);
-            newItem = item.replace('%value%'. obj.value);
+            newItem = item.replace('%id%', obj.id);
+            newItem = newItem.replace('%description%', obj.description);
+            newItem = newItem.replace('%value%', obj.value);
             
         },
 
