@@ -161,6 +161,15 @@ body {
     margin-left: 10px;
 }
 
+.form__type:focus,
+.form__description:focus,
+.form__value:focus {
+    outline: none;
+    border: 1px solid #28B9B5;
+}
+
+.form__submit:focus { outline: none; }
+
 /* ************ */
 /* Items */
 /* ************ */
