@@ -98,6 +98,20 @@ var uiController = (function() {
 
         },
 
+        clearFields() {
+            var fields;
+
+            fields = document.querySelectorAll(`${DOMstrings.inputDescription}, ${DOMstrings.inputValue}`);
+
+            var fieldsArray = Array.prototype.slice.call(fields);
+
+            fieldsArray.forEach((field, index, arr) => {
+                field.value = '';
+            });
+
+            fieldsArray[0].focus();
+        },
+
         getDOMstrings: function() {
             return DOMstrings;
         }
@@ -130,6 +144,7 @@ var appController = (function(budget, ui) {
         input = uiController.getInput();
         newItem = budgetController.addItem(input.type, input.description, input.value);
         uiController.addListItem(newItem, input.type);
+        uiController.clearFields();
 
     }
 
