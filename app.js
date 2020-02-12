@@ -78,11 +78,13 @@ var uiController = (function() {
 
         addListItem: function(obj, type) {
 
-            var item, newItem;
+            var item, newItem, itemContainer;
 
             if(type == 'income') {
+                itemContainer = DOMstrings.incomeList;
                 item = '<div class="item clearfix" id="income-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
             } else if (type == 'expense') {
+                itemContainer = DOMstrings.expenseList;
                 item = '<div class="item clearfix" id="expense-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__percentage">%percentage%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
             }
 
@@ -91,6 +93,9 @@ var uiController = (function() {
             newItem = newItem.replace('%description%', obj.description);
             newItem = newItem.replace('%value%', obj.value);
             
+            // Insert HTMl
+            document.querySelector(itemContainer).insertAdjacentHTML('beforeend', newItem);
+
         },
 
         getDOMstrings: function() {
