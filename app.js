@@ -95,7 +95,11 @@ var uiController = (function() {
         inputValue: '.form__value',
         inputSubmit: '.form__submit',
         incomeList: '.income__list',
-        expenseList: '.expense__list'
+        expenseList: '.expense__list',
+        budgetValue: '.budget__value',
+        incomeValue: '.budget__income--value',
+        expenseValue: '.budget__expenses--value',
+        percentageValue: '.budget__expenses--percentage'
     }
 
     return {
@@ -142,6 +146,13 @@ var uiController = (function() {
             });
 
             fieldsArray[0].focus();
+        },
+
+        displayBudget: function(budget) {
+            document.querySelector(DOMstrings.budgetValue).textContent = budget.budget;
+            document.querySelector(DOMstrings.incomeValue).textContent = budget.totalIncome;
+            document.querySelector(DOMstrings.expenseValue).textContent = budget.totalExpense;
+            document.querySelector(DOMstrings.percentageValue).textContent = budget.percentage;
         },
 
         getDOMstrings: function() {
