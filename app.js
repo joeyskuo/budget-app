@@ -180,6 +180,8 @@ var appController = (function(budget, ui) {
 
     var updateBudget = function() {
         budgetController.calculateBudget();
+        var budget = budgetController.getBudget();
+        uiController.displayBudget(budget);
     }
 
     var addBudgetItem = function() {
@@ -190,6 +192,7 @@ var appController = (function(budget, ui) {
         newItem = budgetController.addItem(input.type, input.description, input.value);
         uiController.addListItem(newItem, input.type);
         uiController.clearFields();
+        updateBudget();
 
     }
 
