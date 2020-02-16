@@ -26,7 +26,10 @@ var budgetController = (function() {
         total: {
             expense: 0,
             income: 0
-        }
+        },
+        budget: 0,
+        percentage: 0
+    }
     }
 
     return {
